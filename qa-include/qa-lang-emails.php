@@ -1,13 +1,14 @@
 <?php
 	
 /*
-	Question2Answer (c) Gideon Greenspan
+	Question2Answer 1.3.1 (c) 2011, Gideon Greenspan
 
 	http://www.question2answer.org/
 
 	
 	File: qa-include/qa-lang-emails.php
-	Version: See define()s at top of qa-include/qa-base.php
+	Version: 1.3.1
+	Date: 2011-02-01 12:56:28 GMT
 	Description: Language phrases for email notifications
 
 
@@ -25,55 +26,31 @@
 */
 
 	return array(
-		'a_commented_body' => "Your answer on ^site_title has a new comment by ^c_handle:\n\n^open^c_content^close\n\nYour answer was:\n\n^open^c_context^close\n\nYou may respond by adding your own comment:\n\n^url\n\nThank you,\n\n^site_title",
-		'a_commented_subject' => 'Your ^site_title answer has a new comment',
-
-		'a_followed_body' => "Your answer on ^site_title has a new related question by ^q_handle:\n\n^open^q_title^close\n\nYour answer was:\n\n^open^a_content^close\n\nClick below to answer the new question:\n\n^url\n\nThank you,\n\n^site_title",
-		'a_followed_subject' => 'Your ^site_title answer has a related question',
-
-		'a_selected_body' => "Congratulations! Your answer on ^site_title has been selected as the best by ^s_handle:\n\n^open^a_content^close\n\nThe question was:\n\n^open^q_title^close\n\nClick below to see your answer:\n\n^url\n\nThank you,\n\n^site_title",
-		'a_selected_subject' => 'Your ^site_title answer has been selected!',
-
-		'c_commented_body' => "A new comment by ^c_handle has been added after your comment on ^site_title:\n\n^open^c_content^close\n\nThe discussion is following:\n\n^open^c_context^close\n\nYou may respond by adding another comment:\n\n^url\n\nThank you,\n\n^site_title",
-		'c_commented_subject' => 'Your ^site_title comment has been added to',
-
-		'confirm_body' => "Please click below to confirm your email address for ^site_title.\n\n^url\n\nThank you,\n^site_title",
-		'confirm_subject' => '^site_title - Email Address Confirmation',
-
-		'feedback_body' => "Comments:\n^message\n\nName:\n^name\n\nEmail:\n^email\n\nPrevious page:\n^previous\n\nUser:\n^url\n\nIP address:\n^ip\n\nBrowser:\n^browser",
+		'a_commented_body' => "پاسخ شمادر  ^site_title داراي نظر جديدي توسط  ^c_handle:\n\n^open^c_content^close\n\nپاسخ شما:\n\n^open^c_context^close\n\nشما ميتوانيد پاسخ خود را به اين نظر:\n\n^url\n\n ارسال فرماييد.با سپاس,\n\n^site_title",
+		'a_commented_subject' => '^site_title پاسخ شما داراي يک نظر جديد مي باشد.',
+		'a_followed_body' => "پاسخ شما در ^site_title داراي پرسشي مرتبط است که توسط ^q_handle:\n\n^open^q_title^close\n\nارائه شده.پاسخ شما:\n\n^open^a_content^close\n\nجهت پاسخ به اين پرسش:\n\n^url\n\کليک نماييد.با سپاس,\n\n^site_title",
+		'a_followed_subject' => '^site_title پاسخ شما داراي پرسش جديدي است.',
+		'a_selected_body' => "عرض تبريک: ^site_title توسط ^s_handle:\n\n^open^a_content^close\n\n بعنوان برترين پاسخ انتخاب شده است.پرسش::\n\n^open^q_title^close\n\nجهت مشاهده پاسخ خود:\n\n^url\n\کليک کنيد.با سپاس,\n\n^site_title",
+		'a_selected_subject' => '^site_title پاسخ شما انتخاب شده است.',
+		'c_commented_body' => "نظر جديدي توسط ^c_handle پس از نظر شما درج شده است. ^site_title:\n\n^open^c_content^close\n\nبحث عبارتست از:\n\n^open^c_context^close\n\nاگر تمايل داريد ذيل اين نظر،نظر ديگري ثبت کنيد:\n\n^url\n\nکليک کنيد.با سپاس,\n\n^site_title",
+		'c_commented_subject' => '^site_title نظر جديدي ثبت شده است.',
+		'confirm_body' => "لطفا جهت تاييد ايميل خود بر روي پيوند زير کليک نماييد: ^site_title.\n\n^url\n\nبا سپاس,\n^site_title",
+		'confirm_subject' => '^site_title - تاييد ايميل شما',
+		'feedback_body' => "نظرهاي:\n^message\n\nنام:\n^name\n\nايميل:\n^email\n\nصفحه قبل:\n^previous\n\nکاربر:\n^url\n\nآي پي:\n^ip\n\nمرورگر:\n^browser",
 		'feedback_subject' => '^ feedback',
-
-		'flagged_body' => "A post by ^p_handle has received ^flags:\n\n^open^p_context^close\n\nClick below to see the post:\n\n^url\n\nThank you,\n\n^site_title",
-		'flagged_subject' => '^site_title has a flagged post',
-
-		'moderate_body' => "A post by ^p_handle requires your approval:\n\n^open^p_context^close\n\nClick below to approve or reject the post:\n\n^url\n\nThank you,\n\n^site_title",
-		'moderate_subject' => '^site_title moderation',
-
-		'new_password_body' => "Your new password for ^site_title is below.\n\nPassword: ^password\n\nIt is recommended to change this password immediately after logging in.\n\nThank you,\n^site_title\n^url",
-		'new_password_subject' => '^site_title - Your New Password',
-
-		'private_message_body' => "You have been sent a private message by ^f_handle on ^site_title:\n\n^open^message^close\n\n^moreThank you,\n\n^site_title\n\n\nTo block private messages, visit your account page:\n^a_url",
-		'private_message_info' => "More information about ^f_handle:\n\n^url\n\n",
-		'private_message_reply' => "Click below to reply to ^f_handle by private message:\n\n^url\n\n",
-		'private_message_subject' => 'Message from ^f_handle on ^site_title',
-
-		'q_answered_body' => "Your question on ^site_title has been answered by ^a_handle:\n\n^open^a_content^close\n\nYour question was:\n\n^open^q_title^close\n\nIf you like this answer, you may select it as the best:\n\n^url\n\nThank you,\n\n^site_title",
-		'q_answered_subject' => 'Your ^site_title question was answered',
-
-		'q_commented_body' => "Your question on ^site_title has a new comment by ^c_handle:\n\n^open^c_content^close\n\nYour question was:\n\n^open^c_context^close\n\nYou may respond by adding your own comment:\n\n^url\n\nThank you,\n\n^site_title",
-		'q_commented_subject' => 'Your ^site_title question has a new comment',
-
-		'q_posted_body' => "A new question has been asked by ^q_handle:\n\n^open^q_title\n\n^q_content^close\n\nClick below to see the question:\n\n^url\n\nThank you,\n\n^site_title",
-		'q_posted_subject' => '^site_title has a new question',
-
-		'reset_body' => "Please click below to reset your password for ^site_title.\n\n^url\n\nAlternatively, enter the code below into the field provided.\n\nCode: ^code\n\nIf you did not ask to reset your password, please ignore this message.\n\nThank you,\n^site_title",
-		'reset_subject' => '^site_title - Reset Forgotten Password',
-
-		'to_handle_prefix' => "^,\n\n",
-
-		'welcome_body' => "Thank you for registering for ^site_title.\n\n^custom^confirmYour login details are as follows:\n\nEmail: ^email\nPassword: ^password\n\nPlease keep this information safe for future reference.\n\nThank you,\n\n^site_title\n^url",
-		'welcome_confirm' => "Please click below to confirm your email address.\n\n^url\n\n",
-		'welcome_subject' => 'Welcome to ^site_title!',
+		'new_password_body' => "'گذرواژه جديد در  ^site_title عبارتست از:\n\nگذرواژه: ^password\n\nتوصيه مي شود پس از ورود به سايت ، آنرا تغيير دهيد..\n\nباسپاس,\n^site_title\n^url",
+		'new_password_subject' => '^site_title - گذرواژه جديد شما',
+		'q_answered_body' => "پرسش شما در ^site_title توسط ^a_handle پاسخ داده شده است.:\n\n^open^a_content^close\n\nپرسش شما:\n\n^open^q_title^close\n\nاگر اين پاسخ مشکل شما را برطرف کرده است مي توانيد آنرا بعنوان بهترين پاسخ انتخاب فرماييد:\n\n^url\n\nباسپاس,\n\n^site_title",
+		'q_answered_subject' => '^site_title پرسش شما پاسخ داده شد.',
+		'q_commented_body' => "پرسش شما در ^site_title داراي يک نظر جديد توسط ^c_handle:\n\n^open^c_content^close\n\nپرسش شما:\n\n^open^c_context^close\n\nشما مي توانيد به اين نظر پاسخ دهيد:\n\n^url\n\nبا سپاس,\n\n^site_title",
+		'q_commented_subject' => '^site_title پرسش شما داراي نظر جديدي است.',
+		'q_posted_body' => "پرسش جديدي توسط ^q_handle:\n\n^open^q_title\n\n^q_content^close\n\nجهت مشاهده آن اينجا کليک کنيد:\n\n^url\n\nبا سپاس,\n\n^site_title",
+		'q_posted_subject' => '^site_title پرسش جديد',
+		'reset_body' => "جهت نوسازي گذرواژه بر روي پيوند زير کليک نماييد: ^site_title.\n\n^url\n\nو يا کد زير را در سايت وارد نماييد:\n\nCode: ^code\n\nاگر شما تقاضاي گذرواژه جديد نداشته ايد براحتي اين پيام را حذف و از آن صرفنظر کنيد.\n\nباسپاس,\n^site_title",
+		'reset_subject' => '^site_title - نوسازي گذرواژه فراموش شده',
+		'welcome_body' => "از ثبت نام شما در سايت ^site_title سپاسگذاريم.\n\n^custom^confirmاطلاعات حساب کاربري شما عبارتست از:\n\nايميل: ^email\nگذرواژه: ^password\n\nاين اطلاعات را در جايي امن حفظ کنيد.\n\nبا سپاس,\n\n^site_title\n^url",
+		'welcome_confirm' => "جهت تاييد ايميل خود بر روي پيوند زير کليک نماييد:\n\n^url\n\n",
+		'welcome_subject' => 'به ^site_title خوش آمديد!',
 	);
 	
 
